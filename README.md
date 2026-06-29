@@ -2,6 +2,8 @@
 
 This project is an end-to-end air-quality monitoring solution built with Python. It cleans raw pollution sensor data, computes AQI values, detects critical pollution alerts, generates visual dashboards, and creates an interactive AQI risk map for Indian cities.
 
+Report : https://docs.google.com/document/d/1PAdj9b2jHLSyauRNU480erc17ib5kvRLH5TL2Ss4oso/edit?usp=sharing 
+
 ## Problem Statement
 
 Air pollution data collected from sensors often contains missing timestamps, invalid readings, inconsistent city names, unit suffixes, and extreme sensor spikes. The objective of this project is to convert noisy air-quality data into meaningful insights that can support pollution monitoring, health-risk analysis, and city-wise AQI reporting.
