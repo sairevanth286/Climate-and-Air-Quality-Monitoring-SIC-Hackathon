@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d9777348dc052b80ae0543ee5baf37f8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/gh/python-visualization/folium@main/folium/templates/leaflet_heat.min.js"></script>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d9777348dc052b80ae0543ee5baf37f8" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d9777348dc052b80ae0543ee5baf37f8 = L.map(
+                "map_d9777348dc052b80ae0543ee5baf37f8",
+                {
+                    center: [20.5937, 78.9629],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_c047a8cf9ba834dbf22958a514634453 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_c047a8cf9ba834dbf22958a514634453.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_5ff2f6c2928dcb0d0a73245a3e89553d = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_5ff2f6c2928dcb0d0a73245a3e89553d.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_7fae5a8d2a8b0198555791fbf45aeda9 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_7fae5a8d2a8b0198555791fbf45aeda9.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_56ca217ae97598c8e436b9e37655b318 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_56ca217ae97598c8e436b9e37655b318.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_5b8a0a94e17fc4f3ae0f7e60af5396fe = L.featureGroup(
+                {
+}
+            );
+        
+    
+            feature_group_5b8a0a94e17fc4f3ae0f7e60af5396fe.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_9e68051fa8577372c9f982d97e332019 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_6b9290238f71f0578066680f00970aac = L.circleMarker(
+                [23.0225, 72.5714],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.46269230769231, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_ce6802dce778c2e06b42b293d8c6eba3 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_79bba40cf9bd34172971a105ce5c1d59 = $(`<div id="html_79bba40cf9bd34172971a105ce5c1d59" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Ahmedabad</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">364.6</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">346.6</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">370.4</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#27ae60;">-23.8</td></tr>       </table>     </div></div>`)[0];
+                popup_ce6802dce778c2e06b42b293d8c6eba3.setContent(html_79bba40cf9bd34172971a105ce5c1d59);
+            
+        
+
+        circle_marker_6b9290238f71f0578066680f00970aac.bindPopup(popup_ce6802dce778c2e06b42b293d8c6eba3)
+        ;
+
+        
+    
+    
+            circle_marker_6b9290238f71f0578066680f00970aac.bindTooltip(
+                `<div>
+                     Ahmedabad — AQI 365
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_28e9953246fbed75e6ebe3d048ba1376 = L.circleMarker(
+                [12.9716, 77.5946],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 39.17743902439024, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_0527cd758bda57204ba82276c5ef772c = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_386660a5294bd41ea1b1b06595975614 = $(`<div id="html_386660a5294bd41ea1b1b06595975614" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Bangalore</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">391.8</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">391.9</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">391.7</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+0.2</td></tr>       </table>     </div></div>`)[0];
+                popup_0527cd758bda57204ba82276c5ef772c.setContent(html_386660a5294bd41ea1b1b06595975614);
+            
+        
+
+        circle_marker_28e9953246fbed75e6ebe3d048ba1376.bindPopup(popup_0527cd758bda57204ba82276c5ef772c)
+        ;
+
+        
+    
+    
+            circle_marker_28e9953246fbed75e6ebe3d048ba1376.bindTooltip(
+                `<div>
+                     Bangalore — AQI 392
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_f848ea9d4e6aca596a0b9fce81b98f27 = L.circleMarker(
+                [13.0827, 80.2707],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.66355263157895, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_9548aafd61f2ea112fd13780d64bf1e5 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_bcb7a201a6d3b63d03d036fc939829e8 = $(`<div id="html_bcb7a201a6d3b63d03d036fc939829e8" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Chennai</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">366.6</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">388.4</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">361.3</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+27.1</td></tr>       </table>     </div></div>`)[0];
+                popup_9548aafd61f2ea112fd13780d64bf1e5.setContent(html_bcb7a201a6d3b63d03d036fc939829e8);
+            
+        
+
+        circle_marker_f848ea9d4e6aca596a0b9fce81b98f27.bindPopup(popup_9548aafd61f2ea112fd13780d64bf1e5)
+        ;
+
+        
+    
+    
+            circle_marker_f848ea9d4e6aca596a0b9fce81b98f27.bindTooltip(
+                `<div>
+                     Chennai — AQI 367
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_47f0bd49cf6366a054be32b29d0eec0b = L.circleMarker(
+                [28.6139, 77.209],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.5756338028169, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_46fada78fae1c4de29788bf32d94bb60 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_2ebe5a41d37558a0c227999cae05a1a2 = $(`<div id="html_2ebe5a41d37558a0c227999cae05a1a2" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Delhi</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">375.8</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">388.9</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">369.0</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+19.9</td></tr>       </table>     </div></div>`)[0];
+                popup_46fada78fae1c4de29788bf32d94bb60.setContent(html_2ebe5a41d37558a0c227999cae05a1a2);
+            
+        
+
+        circle_marker_47f0bd49cf6366a054be32b29d0eec0b.bindPopup(popup_46fada78fae1c4de29788bf32d94bb60)
+        ;
+
+        
+    
+    
+            circle_marker_47f0bd49cf6366a054be32b29d0eec0b.bindTooltip(
+                `<div>
+                     Delhi — AQI 376
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_82d3d865a39c158a045f0110fd64c0e6 = L.circleMarker(
+                [17.385, 78.4867],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 35.48432432432433, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_0d9a72571850214ce9aaa5bdff274eff = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_2ebc784a48a7f00d43ec628620f56a7d = $(`<div id="html_2ebc784a48a7f00d43ec628620f56a7d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Hyderabad</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">354.8</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">369.5</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">350.5</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+19.0</td></tr>       </table>     </div></div>`)[0];
+                popup_0d9a72571850214ce9aaa5bdff274eff.setContent(html_2ebc784a48a7f00d43ec628620f56a7d);
+            
+        
+
+        circle_marker_82d3d865a39c158a045f0110fd64c0e6.bindPopup(popup_0d9a72571850214ce9aaa5bdff274eff)
+        ;
+
+        
+    
+    
+            circle_marker_82d3d865a39c158a045f0110fd64c0e6.bindTooltip(
+                `<div>
+                     Hyderabad — AQI 355
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_218358ad5d1fed6b70cbf36073fe5f5a = L.circleMarker(
+                [26.9124, 75.7873],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.111285714285714, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_be536127d529c8dde2ad3ac6d50b909e = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_0180a2c8b2f83e7323a01ff45949668d = $(`<div id="html_0180a2c8b2f83e7323a01ff45949668d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Jaipur</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">361.1</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">379.3</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">353.8</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+25.4</td></tr>       </table>     </div></div>`)[0];
+                popup_be536127d529c8dde2ad3ac6d50b909e.setContent(html_0180a2c8b2f83e7323a01ff45949668d);
+            
+        
+
+        circle_marker_218358ad5d1fed6b70cbf36073fe5f5a.bindPopup(popup_be536127d529c8dde2ad3ac6d50b909e)
+        ;
+
+        
+    
+    
+            circle_marker_218358ad5d1fed6b70cbf36073fe5f5a.bindTooltip(
+                `<div>
+                     Jaipur — AQI 361
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_59659a61df06e53212c373169aff8931 = L.circleMarker(
+                [22.5726, 88.3639],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.24171052631579, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_51ea66e5f44593ac3a098e7628378da7 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_6cce3e079e0c72ed8a94cd1803ca9b2e = $(`<div id="html_6cce3e079e0c72ed8a94cd1803ca9b2e" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Kolkata</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">372.4</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">351.2</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">379.0</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#27ae60;">-27.7</td></tr>       </table>     </div></div>`)[0];
+                popup_51ea66e5f44593ac3a098e7628378da7.setContent(html_6cce3e079e0c72ed8a94cd1803ca9b2e);
+            
+        
+
+        circle_marker_59659a61df06e53212c373169aff8931.bindPopup(popup_51ea66e5f44593ac3a098e7628378da7)
+        ;
+
+        
+    
+    
+            circle_marker_59659a61df06e53212c373169aff8931.bindTooltip(
+                `<div>
+                     Kolkata — AQI 372
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3b10e97bf18301036d386332342c2bda = L.circleMarker(
+                [26.8467, 80.9462],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.43779411764706, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_b67c176c293fe533fb8fb71cfd963db5 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_2f8ce6b3c9cc8feafc357e5b59e80cfb = $(`<div id="html_2f8ce6b3c9cc8feafc357e5b59e80cfb" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Lucknow</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">374.4</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">344.4</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">386.9</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#27ae60;">-42.4</td></tr>       </table>     </div></div>`)[0];
+                popup_b67c176c293fe533fb8fb71cfd963db5.setContent(html_2f8ce6b3c9cc8feafc357e5b59e80cfb);
+            
+        
+
+        circle_marker_3b10e97bf18301036d386332342c2bda.bindPopup(popup_b67c176c293fe533fb8fb71cfd963db5)
+        ;
+
+        
+    
+    
+            circle_marker_3b10e97bf18301036d386332342c2bda.bindTooltip(
+                `<div>
+                     Lucknow — AQI 374
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_322a87dac7ec3143cc92478d68d742cc = L.circleMarker(
+                [19.076, 72.8777],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 36.81372549019608, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_5d7f195c39958fd0e57731522657686e = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_98fd4dcb9ddbc26ca3dc2e07e7c95e69 = $(`<div id="html_98fd4dcb9ddbc26ca3dc2e07e7c95e69" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Mumbai</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">368.1</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">359.2</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">370.9</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#27ae60;">-11.6</td></tr>       </table>     </div></div>`)[0];
+                popup_5d7f195c39958fd0e57731522657686e.setContent(html_98fd4dcb9ddbc26ca3dc2e07e7c95e69);
+            
+        
+
+        circle_marker_322a87dac7ec3143cc92478d68d742cc.bindPopup(popup_5d7f195c39958fd0e57731522657686e)
+        ;
+
+        
+    
+    
+            circle_marker_322a87dac7ec3143cc92478d68d742cc.bindTooltip(
+                `<div>
+                     Mumbai — AQI 368
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_369dd2daca45a25448b49aac15a0167f = L.circleMarker(
+                [18.5204, 73.8567],
+                {"bubblingMouseEvents": true, "color": "darkred", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "darkred", "fillOpacity": 0.75, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 37.30753623188406, "stroke": true, "weight": 2}
+            ).addTo(feature_group_9e68051fa8577372c9f982d97e332019);
+        
+    
+        var popup_c678cc19665724c855212e6b78a6a8e2 = L.popup({
+  "maxWidth": 270,
+});
+
+        
+            
+                var html_510ed52682356543bb9b96b802f277a7 = $(`<div id="html_510ed52682356543bb9b96b802f277a7" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial,sans-serif;min-width:210px;padding:10px;">       <h3 style="margin:0 0 8px;color:#2c3e50;border-bottom:2px solid #3498db;padding-bottom:4px;">Pune</h3>       <table style="width:100%;font-size:13px;border-collapse:collapse;">         <tr><td style="padding:3px 6px;color:#666;">Avg AQI</td>             <td style="padding:3px 6px;font-weight:bold;color:darkred;">373.1</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Category</td>             <td style="padding:3px 6px;font-weight:bold;">Hazardous</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Worst Pollutant</td>             <td style="padding:3px 6px;font-weight:bold;color:#e74c3c;">PM10</td></tr>         <tr style="background:#f8f9fa;"><td style="padding:3px 6px;color:#666;">Rush Hour AQI</td>             <td style="padding:3px 6px;">382.8</td></tr>         <tr><td style="padding:3px 6px;color:#666;">Off-Peak AQI</td>             <td style="padding:3px 6px;">370.1</td></tr>         <tr style="background:#fff3cd;"><td style="padding:3px 6px;color:#666;">Rush Δ</td>             <td style="padding:3px 6px;font-weight:bold;color:#c0392b;">+12.7</td></tr>       </table>     </div></div>`)[0];
+                popup_c678cc19665724c855212e6b78a6a8e2.setContent(html_510ed52682356543bb9b96b802f277a7);
+            
+        
+
+        circle_marker_369dd2daca45a25448b49aac15a0167f.bindPopup(popup_c678cc19665724c855212e6b78a6a8e2)
+        ;
+
+        
+    
+    
+            circle_marker_369dd2daca45a25448b49aac15a0167f.bindTooltip(
+                `<div>
+                     Pune — AQI 373
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            feature_group_9e68051fa8577372c9f982d97e332019.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var feature_group_70fbde31f288c67d070aa485fa9fc916 = L.featureGroup(
+                {
+}
+            );
+        
+    
+            var heat_map_1fb4564c51338371f2153b340e91485d = L.heatLayer(
+                [[23.049895604855596, 72.5652878439752, 0.3925], [26.882559791991138, 80.96593680290594, 0.8101666666666667], [28.573317734788766, 77.25656223516368, 0.41183333333333333], [26.872813970199033, 80.9748064305277, 0.6838333333333334], [18.483211363267554, 73.85173859378956, 0.9661666666666667], [26.83377980242326, 80.98887649888486, 0.7211666666666666], [22.586986512008068, 88.39617616132709, 0.7248333333333333], [22.566941419882735, 88.33662387217848, 0.29616666666666663], [22.578058478701585, 88.32028172561041, 0.6431666666666667], [23.05526311719926, 72.58456643991221, 0.2975], [22.59840877400854, 88.34935259681299, 0.6501666666666667], [23.069569802439492, 72.61071211213222, 0.4071666666666667], [23.050338349707378, 72.54086387078519, 0.5216666666666666], [13.079372100372705, 80.22508037657873, 0.6853333333333333], [22.538028949206755, 88.38220489532425, 0.8458333333333333], [18.54487621559078, 73.90345097324342, 0.8215], [13.065282535813816, 80.2577459706035, 0.36366666666666664], [18.51735558112758, 73.82564713590843, 0.42866666666666664], [26.809692150533547, 80.9437704926226, 0.9468333333333334], [12.944290934905089, 77.61158139946825, 0.3408333333333333], [12.965315191887234, 77.62786781960578, 0.5423333333333333], [18.540426510200223, 73.83793666413821, 0.9051666666666667], [28.64712598013952, 77.23947643574968, 0.6766666666666666], [19.064747837903017, 72.85653281039303, 0.7648333333333333], [26.9306495503975, 75.75127524836093, 0.6128333333333333], [22.54259082024751, 88.3146362269751, 0.9204999999999999], [18.54909243775021, 73.8731850856592, 0.34550000000000003], [22.593116537862635, 88.3919729031022, 0.7581666666666667], [26.908291577553836, 75.7941741195953, 0.5469999999999999], [22.986479699812765, 72.5328530073536, 0.6106666666666666], [12.988440296179048, 77.59170962061431, 0.6533333333333333], [17.39152361064812, 78.5131998857416, 0.37666666666666665], [26.925871832000063, 75.79265794006581, 0.4353333333333333], [13.088620716074542, 80.25109500980626, 0.3095], [22.975581783456796, 72.56507173892324, 0.2643333333333333], [19.047458467281952, 72.86855286437246, 0.8], [26.882040307326815, 80.91959394858654, 0.22833333333333333], [26.86823027416891, 75.7654383892022, 0.21366666666666664], [18.499759375776666, 73.8728916514727, 0.7598333333333332], [13.088403215234129, 80.29908982091065, 0.651], [13.099131354032739, 80.26133868614401, 0.8318333333333334], [28.645302038466603, 77.17569729199077, 0.7695], [26.798971207313386, 80.90520478607758, 0.5946666666666667], [19.098235935059645, 72.87388772302515, 0.28883333333333333], [26.87852717790336, 75.78740447751034, 0.7068333333333334], [28.579131210271317, 77.22863203750778, 0.5358333333333334], [26.907015627557406, 75.77540212260965, 0.7511666666666666], [28.594051208914788, 77.2220282593119, 0.6768333333333334], [18.506581261055338, 73.81546499193162, 0.6025], [26.87420059021205, 75.83348976645496, 0.5296666666666667], [22.613458069070763, 88.38387071338107, 0.3635], [19.05258699614595, 72.92461763773478, 0.29833333333333334], [12.99947509039658, 77.6162890189159, 0.6086666666666667], [26.841636150214377, 80.92342415618452, 0.9435], [12.93123909621535, 77.63486023965439, 0.729], [17.380577628983364, 78.45693633647952, 0.8193333333333334], [12.952195662415066, 77.6025219568942, 0.6591666666666667], [17.352677278293925, 78.52236142840924, 0.8089999999999999], [23.048351952983523, 72.5933462955951, 0.8310000000000001], [12.96480930397751, 77.60733088407025, 0.46699999999999997], [22.581009796891276, 88.37888466015548, 0.7548333333333332], [18.478844432113988, 73.84828074021706, 0.5443333333333333], [22.97666141738619, 72.57079908192445, 0.28683333333333333], [26.829686121233276, 80.91065241888661, 0.4576666666666667], [17.345340296772257, 78.49546445721776, 0.5445], [13.04975929685369, 80.31321201183769, 0.17450000000000002], [28.62200611397004, 77.19368698045349, 0.767], [18.52949154914814, 73.80898038710298, 0.803], [23.068355921324144, 72.56963034369429, 0.7035], [26.87497352272503, 80.90447299999225, 0.24050000000000002], [12.970265833083817, 77.59367069943545, 0.6073333333333333], [26.9561826454975, 75.7944728052376, 0.7795], [17.382348940105697, 78.46339756630918, 0.3418333333333333], [18.503556899734253, 73.85876724024716, 0.6023333333333333], [19.069891146030507, 72.82986120798803, 0.6826666666666668], [28.646529192419436, 77.24861607718398, 0.129], [13.046724908899861, 80.27610361435391, 0.6918333333333334], [18.481257574113542, 73.87392400930399, 0.7973333333333333], [26.890523378383904, 75.80324226346919, 0.4081666666666667], [19.098699461428687, 72.90456474919176, 0.7253333333333333], [12.93237409459559, 77.63620118451377, 0.31816666666666665], [18.49342139908949, 73.81044125561762, 0.45166666666666666], [12.977085246939149, 77.58169222838625, 0.63], [18.55337897431324, 73.88752514720643, 0.8008333333333333], [22.554313889282273, 88.40918993950697, 0.5441666666666667], [17.364091783814015, 78.48820571292318, 0.6468333333333334], [17.360596509056762, 78.5303043570049, 0.8743333333333334], [26.8131607817582, 80.90069106193924, 0.3055], [23.016009706000304, 72.62063755640558, 0.5025], [26.951567726625495, 75.8121608019457, 0.9864999999999999], [17.424079249087853, 78.52604466396978, 0.6496666666666667], [18.522285836038645, 73.83829290518308, 0.5271666666666667], [12.9988012432111, 77.61076612631678, 0.5428333333333333], [28.601265772887373, 77.16844666680616, 0.7708333333333334], [26.8713789611349, 80.92244605159229, 0.9656666666666667], [22.616281315053378, 88.33799705750057, 0.7193333333333334], [17.34727579324115, 78.51981126721249, 0.16533333333333333], [22.98782843166245, 72.53932683081577, 0.2485], [12.981538279152085, 77.63205620408375, 0.48833333333333334], [22.99214346657146, 72.55243236729001, 0.4875], [28.64164048382412, 77.2561826426061, 0.41766666666666663], [12.971674118620236, 77.55898975025512, 0.6333333333333333], [19.02739362877082, 72.8506656029999, 0.13099999999999998], [26.875582221778654, 75.8050658673613, 0.7739999999999999], [22.984683250462854, 72.57203299316205, 0.776], [18.53982624356429, 73.8648116609221, 0.5646666666666667], [18.490377565166003, 73.88711245261823, 0.75], [18.54194071296158, 73.88059840039156, 0.426], [26.80980577515573, 80.90857538036504, 0.7941666666666667], [28.656656255100653, 77.1987578193825, 0.616], [22.552694869178094, 88.36275840453516, 0.357], [17.40128642127636, 78.53226232570469, 0.7815], [13.061344622688207, 80.3131808429312, 0.7775], [26.86488594913863, 75.79281980423268, 0.8175], [28.62729751116811, 77.16958974037507, 0.632], [26.876433959706393, 75.77921143193163, 0.2715], [17.43162319121432, 78.49630425532344, 0.25483333333333336], [23.06580232216002, 72.6018360915613, 0.6083333333333333], [22.56933816015553, 88.39237634492522, 0.42866666666666664], [12.9233836783977, 77.55551439967657, 0.8978333333333334], [22.605542861488274, 88.39358170883251, 0.5056666666666666], [17.358264074196644, 78.48977695905991, 0.45433333333333337], [28.624501582070003, 77.24577389537761, 0.6303333333333333], [23.032810715733874, 72.56265715692736, 0.645], [26.834118404340717, 80.93878820863736, 0.7193333333333334], [18.535593102557996, 73.89344906317524, 0.07833333333333334], [12.966989688207631, 77.56938395629514, 0.6508333333333334], [19.049666236299757, 72.90230142802434, 0.6158333333333333], [26.87835687634239, 80.90672780798542, 0.6164999999999999], [13.03935588569552, 80.28014336637565, 0.9366666666666666], [19.04061732441927, 72.91016641904564, 0.8656666666666666], [12.952633467392408, 77.55898719329711, 0.6613333333333333], [22.614697047248747, 88.33045317227352, 0.8333333333333334], [19.054472008233795, 72.84306133951921, 0.7418333333333333], [17.346549006366537, 78.43881480163364, 0.4098333333333333], [18.475939540916425, 73.82416414709358, 0.4948333333333333], [22.52793819326272, 88.3730143816111, 0.254], [26.930471452679953, 75.77666304568321, 0.16083333333333333], [13.064499109695205, 80.27115262370222, 0.7506666666666666], [26.949900494223463, 75.82241316268222, 0.13733333333333334], [13.03704750620128, 80.23884984095966, 0.655], [12.94527448711044, 77.56953875758322, 0.18683333333333332], [26.91952326517428, 75.77892624257032, 0.8226666666666667], [18.47532541199276, 73.84406141384596, 0.4625], [23.024875294871766, 72.53156719029037, 0.8223333333333332], [26.945745855378856, 75.7424961866465, 0.6261666666666666], [26.954884186901808, 75.747211314158, 0.329], [23.056857495159775, 72.61166531439275, 0.7113333333333334], [26.96035706805866, 75.81750258802737, 0.512], [17.412947754077134, 78.50094832759956, 0.7541666666666667], [12.999499635457813, 77.55805522084131, 0.4351666666666667], [26.916006803594765, 75.78872228701904, 0.6288333333333334], [22.60835721441226, 88.36017993655935, 0.5901666666666667], [22.561108949610038, 88.37785632712371, 0.428], [26.823346331750084, 80.9101768410954, 0.4896666666666667], [28.611687727402376, 77.20068893685949, 0.4276666666666667], [13.055956994052888, 80.25745118101152, 0.9583333333333334], [19.062639244982627, 72.86044955644125, 0.39466666666666667], [17.372946407972695, 78.50527433454559, 0.5838333333333333], [22.55228764745713, 88.40878579267154, 0.42516666666666664], [19.11763480195382, 72.87579104283002, 0.42550000000000004], [18.503236120500468, 73.86024347898301, 0.9864999999999999], [13.006456048877363, 77.609858734056, 0.5726666666666667], [28.64433918279471, 77.21227222760658, 0.6028333333333333], [17.398291762926764, 78.46551556141824, 0.448], [13.10618931623103, 80.24094045931258, 0.5701666666666667], [13.10217981288185, 80.3067719068326, 0.6975], [18.483610283730155, 73.86813797405419, 0.2385], [22.532109574822996, 88.38647156282714, 0.7603333333333333], [22.980949321882353, 72.61499398227006, 0.7866666666666666], [28.57764079300378, 77.25488802459091, 0.4141666666666667], [19.10608841760851, 72.88706820044663, 0.4096666666666667], [26.874962410462953, 80.97571148389831, 0.6751666666666667], [23.067102706281734, 72.54673833538392, 0.5855], [28.62290758953583, 77.16850491975644, 0.31083333333333335], [12.983216570002412, 77.56172913040928, 0.9021666666666666], [17.391495061147246, 78.49394305140338, 0.5935], [23.019098515298122, 72.57366317755131, 0.5983333333333334], [13.109092339000659, 80.30062447165122, 0.8916666666666667], [26.911615321557544, 75.79725934415227, 0.5785], [23.06562362356901, 72.53337335885011, 0.6443333333333334], [28.575610356590012, 77.16777090119108, 0.6971666666666667], [19.091786328504053, 72.86956083007904, 0.6825], [19.103432141614185, 72.89482314133086, 0.49383333333333335], [18.503763775832823, 73.89653665473615, 0.7568333333333334], [13.108953214707066, 80.24775349409103, 0.7693333333333334], [26.898819201777208, 75.76874399802043, 0.10933333333333332], [22.9882611648625, 72.53617833725421, 0.6935], [22.616212746337577, 88.35769040371987, 0.7841666666666667], [17.373331982277744, 78.50966857086773, 0.5866666666666667], [12.97689930652529, 77.63821399868385, 0.8618333333333333], [18.54843014939094, 73.85463695641246, 0.7925], [23.010135947348083, 72.62006315449243, 0.5685], [26.934176023600365, 75.83241946600039, 0.4848333333333333], [26.808547857721702, 80.98125336791908, 0.8951666666666667], [13.096407388399122, 80.23289216783351, 0.8118333333333334], [22.581425799996925, 88.38250963651055, 0.6535000000000001], [22.52383026858886, 88.35933179618418, 0.7781666666666667], [13.115239951119634, 80.25023590253441, 0.9471666666666666], [12.967454808179856, 77.5888314127068, 0.8188333333333333], [13.06289273914425, 80.31254418955156, 0.594], [19.10412940354315, 72.83875884109962, 0.7939999999999999], [19.125703465783758, 72.91562000243079, 0.6823333333333333], [22.550990843786405, 88.3975896579661, 0.8486666666666667], [12.93224195318714, 77.64451047304742, 0.4923333333333333], [26.863268473610653, 80.96121250155588, 0.8421666666666667], [22.981544072698416, 72.61110333988967, 0.4893333333333334], [26.86529995032045, 75.76138280580412, 0.5445], [12.935902187516664, 77.62227679406922, 0.6351666666666667], [17.354820422721293, 78.52776382271308, 0.5193333333333334], [12.987226903932749, 77.54821627104947, 0.7286666666666667], [17.33554298341287, 78.44186579170145, 0.482], [13.093292517764773, 80.30084818108595, 0.22183333333333333], [12.945455282062738, 77.62954088429231, 0.6048333333333333], [13.038423194015326, 80.30079638536418, 0.6235], [22.61537954301723, 88.39111083991044, 0.39716666666666667], [13.102512078397865, 80.30449802186554, 0.44316666666666665], [13.036715129954707, 80.24087821107192, 0.5758333333333333], [26.874892367930567, 75.7877530990193, 0.5545], [23.047018812832885, 72.58440118445763, 0.9056666666666666], [23.057613109976195, 72.5369212992441, 0.8083333333333333], [19.099462109193517, 72.8470041490869, 0.5389999999999999], [12.94867587513178, 77.61559046972813, 0.32883333333333337], [17.43302047848987, 78.4978543605977, 0.9471666666666666], [22.97795003149913, 72.58303089699275, 0.37633333333333335], [28.568135055158017, 77.24741457113669, 0.786], [26.933357828510065, 75.75461278464225, 0.5286666666666666], [28.573072100582422, 77.17735332288804, 0.5681666666666666], [18.56840271795542, 73.85255606424585, 0.6528333333333333], [26.87510809483414, 80.95984083421078, 0.8771666666666665], [13.089941314995865, 80.2352130254665, 0.36366666666666664], [17.429602445355812, 78.46683426325147, 0.9101666666666667], [19.083801721580755, 72.89767759445891, 0.6598333333333333], [13.097623315524531, 80.31475944096955, 0.7728333333333333], [18.485243898992003, 73.8575352738447, 0.3255], [28.604303439074076, 77.20641687294827, 0.5123333333333333], [22.984421752619774, 72.53480946098728, 0.7636666666666666], [18.498207554578123, 73.83717046037609, 0.9326666666666668], [26.83949032136813, 80.95729875470367, 0.8223333333333332], [26.925862911741827, 75.77848108965856, 0.9105], [26.90327831094287, 75.7590628526697, 0.3516666666666667], [22.581430624840902, 88.34560409113172, 0.36516666666666664], [12.925205983427738, 77.58644000441569, 0.7331666666666666], [28.61131326750902, 77.18155928682043, 0.9245000000000001], [28.621145793312213, 77.21557719004319, 0.9751666666666667], [13.102900218111039, 80.28549484822013, 0.2881666666666667], [17.400243305652104, 78.4683214151824, 0.5283333333333333], [28.642643222198597, 77.21391443835996, 0.9243333333333333], [17.37814181951799, 78.4993012480941, 0.1605], [13.068765733445026, 80.27197392446068, 0.86], [22.596270568848222, 88.40254028867237, 0.5651666666666667], [19.11810571972952, 72.87806329251832, 0.8078333333333333], [12.973627511474058, 77.62458704107638, 0.41650000000000004], [13.06414506917442, 80.30443823623452, 0.7221666666666667], [22.572014164651744, 88.32548567243353, 0.36733333333333335], [22.979705914707296, 72.60559932110394, 0.611], [28.56945679169069, 77.18706114361336, 0.7971666666666667], [22.556013004050158, 88.33119944451916, 0.7383333333333333], [13.0640893369802, 80.29496925667252, 0.4505], [22.97396828435601, 72.60411734245207, 0.09533333333333334], [17.420654802357458, 78.47392615731916, 0.43683333333333335], [22.537961289906065, 88.37398404079451, 0.7068333333333334], [12.93356725558649, 77.58109193610782, 0.8278333333333333], [26.892542918090097, 80.99574644725837, 0.6478333333333333], [23.04971048913546, 72.55249615099207, 0.4038333333333334], [22.59136650491661, 88.3844406365484, 0.39699999999999996], [12.960384169516365, 77.60868886345861, 0.8015], [22.52367276449757, 88.33480576586022, 0.31516666666666665], [26.914908830296728, 75.75367513042583, 0.3818333333333333], [17.351590686787656, 78.52033042905502, 0.9885], [13.131613300268361, 80.27629694280284, 0.8873333333333333], [26.946306973088173, 75.83633216643263, 0.6], [12.935759588856879, 77.58942456132543, 0.7798333333333333], [17.374257271584195, 78.44470492836462, 0.6011666666666666], [19.101533017279476, 72.87107790273227, 0.647], [22.569532693419042, 88.32896729738133, 0.7198333333333333], [13.050792665223089, 80.31141036221563, 0.9696666666666666], [26.801164908897427, 80.91948522849438, 0.4978333333333333], [26.891605933031453, 75.78631975424015, 0.9165], [23.03114451730148, 72.57072899758506, 0.5018333333333334], [17.34341153345569, 78.46106674540557, 0.22883333333333336], [26.946758838476256, 75.80105887004785, 0.6493333333333333], [17.39991490501343, 78.50372032553514, 0.9176666666666667], [13.108990301903955, 80.22651084817215, 0.6791666666666667], [28.600560838493262, 77.21295274352617, 0.6863333333333334], [17.368845648329735, 78.52114788732872, 0.764], [17.38325725085873, 78.51356275894594, 0.37183333333333335], [13.006801551688117, 77.59507914829035, 0.38883333333333336], [13.012555224387135, 77.6033123940537, 0.9345000000000001], [22.607627429883372, 88.34795907955916, 0.4891666666666667], [26.846581695853146, 80.94934110410047, 0.6325], [22.53309797158961, 88.35375525067016, 0.6441666666666667], [22.614333767255168, 88.37698322403648, 0.8101666666666667], [22.5403506582437, 88.34778556356096, 0.8148333333333333], [26.815860300966268, 80.89868231317986, 0.6078333333333333], [18.563146045850402, 73.85152073282569, 0.28983333333333333], [18.501153507242076, 73.86654771915578, 0.8156666666666667], [19.026731445629302, 72.85550221066009, 0.4583333333333333], [13.10300334656989, 80.28407697730694, 0.41083333333333333], [18.568580594754252, 73.86873577096581, 0.7693333333333334], [18.518150587362772, 73.88284325631841, 0.6925], [28.654232787196406, 77.23106959467184, 0.28], [13.017921122354938, 77.62280051707381, 0.35533333333333333], [26.949080143826194, 75.74871040711837, 0.7885000000000001], [26.869941350299378, 80.94020886995274, 0.5975], [26.852010380241126, 80.96161024094825, 0.6075], [28.660881511670556, 77.25745780814317, 0.6478333333333333], [26.825522824548788, 80.96957534974379, 0.47850000000000004], [17.40999835379353, 78.4713492861313, 0.4681666666666666], [13.045086977486424, 80.22479469602858, 0.22383333333333336], [12.999334312752918, 77.59356997418169, 0.8943333333333334], [13.020154016949492, 77.59109734561936, 0.5223333333333333], [26.960191697907387, 75.77845760021941, 0.8098333333333333], [13.112068215055999, 80.22918192723118, 0.30483333333333335], [26.852246171013775, 80.97640597869858, 0.24533333333333332], [13.01407016672199, 77.62685830906175, 0.8063333333333333], [13.036397072720119, 80.25797023413068, 0.8735], [18.475269847231385, 73.81762822911146, 0.6345], [17.40253056286675, 78.50802581963117, 0.6255000000000001], [18.54777206827516, 73.89324565480557, 0.6878333333333333], [18.54434314684765, 73.88678715921067, 0.6506666666666666], [28.56879637098233, 77.18245351504413, 0.7055], [17.397189777337527, 78.52251253046248, 0.6143333333333334], [22.972950012493968, 72.57286293421163, 0.8998333333333333], [23.040228739936442, 72.52436072891285, 0.6183333333333333], [12.96173555575534, 77.63416348813837, 0.9101666666666667], [12.988761280885587, 77.56836583633606, 0.9991666666666666], [13.006878112963191, 77.57940314234095, 0.548], [13.118034467114407, 80.2505943651119, 0.9908333333333333], [28.622932025088314, 77.19869400677479, 0.9375], [12.949082505075507, 77.63325575621718, 0.6325], [28.58265936819395, 77.16748115912358, 0.125], [23.006692693854568, 72.59316391476415, 0.9521666666666666], [28.644643160597628, 77.25887433700667, 0.5145], [18.500036205701115, 73.84749419511313, 0.9585], [18.48408212780296, 73.8641871929623, 0.517], [26.89645800372629, 80.96628810101207, 0.5603333333333333], [13.092221284041338, 80.25993690929218, 0.8053333333333333], [13.124229876028556, 80.27039165961304, 0.7121666666666667], [26.810136691331305, 80.93273784631992, 0.6835], [28.570616666884778, 77.17919790376888, 0.681], [17.336766878099994, 78.48202799165001, 0.7318333333333333], [17.39845402649518, 78.47102924623789, 0.7939999999999999], [18.512438177150525, 73.90262092728446, 0.5351666666666667], [26.87189631215749, 80.9502856636945, 0.8073333333333333], [23.000954087511182, 72.6110996798773, 0.8514999999999999], [22.546109711688068, 88.34643427305167, 0.7871666666666667], [22.613506481442297, 88.36685420552851, 0.9681666666666666], [18.544631794941797, 73.86577447941637, 0.09799999999999999], [26.86204392090095, 80.92613832915148, 0.5065], [12.945737206162667, 77.57684923471686, 0.393], [18.48594415640834, 73.89413143652908, 0.20716666666666667], [13.061024693325013, 80.27684893944145, 0.5691666666666667], [13.111897442514138, 80.29908241093757, 0.645], [23.01633862585842, 72.56902573085867, 0.6693333333333333], [23.071970174893504, 72.5888597476979, 0.26066666666666666], [19.107463844311788, 72.91795539692193, 0.8775], [19.104758983622933, 72.84621793449536, 0.747], [13.088917073373759, 80.23088941573145, 0.5448333333333333], [22.587892212656403, 88.40943494281878, 0.4046666666666667], [17.386273206430012, 78.47999724928678, 0.8798333333333332], [26.86598427514182, 75.83327745223292, 0.9454999999999999], [22.982800268413015, 72.52550790933049, 0.9229999999999999], [22.997106661150493, 72.52795304339183, 0.46216666666666667], [22.56811178424118, 88.36550878012571, 0.427], [26.89365699490286, 75.74239604825749, 0.4008333333333333], [17.346160036824923, 78.47515043779899, 0.36083333333333334], [19.032052845082653, 72.897518972561, 0.8543333333333334], [26.883102054152484, 75.76750715687837, 0.47233333333333327], [18.50981257771781, 73.84836096330692, 0.6673333333333333], [12.92176607076748, 77.55580703709987, 0.6551666666666667], [22.608876456374087, 88.31402330625119, 0.9025], [28.61471673558129, 77.20795020065073, 0.5626666666666668], [18.503709416101064, 73.84983270201465, 0.7638333333333334], [28.641958113752658, 77.2431203706215, 0.801], [28.589934854341525, 77.19124904409678, 0.7063333333333334], [22.546848285302836, 88.36188634005511, 0.36183333333333334], [22.590925835765884, 88.33672528754634, 0.9565], [22.55567357420549, 88.40693846175891, 0.7128333333333333], [12.926456928984697, 77.59067696052395, 0.8201666666666667], [23.04365580415968, 72.53644540115575, 0.5048333333333332], [17.33973740200055, 78.45052053716385, 0.6639999999999999], [26.95428231935307, 75.73822597818211, 0.625], [26.815532197481133, 80.89932835129017, 0.7073333333333333], [19.037062946756222, 72.88971492866284, 0.30733333333333335], [28.588063890873908, 77.21592120504307, 0.9006666666666666], [28.622919538276612, 77.24394353330898, 0.6489999999999999], [26.86287413929119, 75.82263694593424, 0.7623333333333333], [26.9243119086427, 75.7535743486105, 0.8106666666666666], [26.93969373881353, 75.82284915417907, 0.6851666666666667], [19.051426348375415, 72.91957936809027, 0.7268333333333333], [23.017945743029866, 72.58174244543333, 0.8221666666666667], [17.433464953361767, 78.47285360786393, 0.16783333333333333], [22.603915934582012, 88.34573991178284, 0.44149999999999995], [19.10592135222415, 72.88777339188627, 0.81], [28.58553556952254, 77.20040260937893, 0.14266666666666666], [22.554363563436358, 88.32171083930804, 0.8018333333333334], [18.473383477009968, 73.84134786554073, 0.7341666666666666], [22.97440341478175, 72.53794877575818, 0.242], [12.994118332085087, 77.61540912356836, 0.8616666666666667], [22.59645803864574, 88.345615317113, 0.6228333333333333], [13.12170194571177, 80.28008305480284, 0.36366666666666664], [18.48300263417466, 73.82107186614556, 0.7623333333333333], [22.59190954269297, 88.33119439364421, 0.8586666666666667], [19.076729270158204, 72.92687744759287, 0.3753333333333333], [22.523000760473334, 88.31555798018975, 0.3031666666666667], [13.020908458193052, 77.60306388341341, 0.5243333333333333], [12.934290997551852, 77.63433021997541, 0.43883333333333335], [13.00963803001277, 77.59822004131114, 0.8668333333333333], [22.584779202986077, 88.34121871915009, 0.7611666666666667], [22.9775519696372, 72.58085676088908, 0.6886666666666666], [23.001975519320276, 72.58776210466603, 0.6578333333333333], [23.05612451768426, 72.52321605439144, 0.8223333333333332], [17.394571377468573, 78.45982805396868, 0.6151666666666668], [17.42238884979038, 78.46206645065618, 0.5964999999999999], [12.982677013323542, 77.59995408400896, 0.6010000000000001], [23.012116650005925, 72.58916207635998, 0.5591666666666667], [18.542976963471542, 73.86339377953195, 0.7718333333333334], [12.997442223718476, 77.64294170759929, 0.5191666666666667], [26.90432723879008, 75.78875830518855, 0.17566666666666667], [26.863646987794123, 75.81690285563104, 0.5445], [13.0847230067046, 80.26149614303606, 0.41650000000000004], [22.532007196308943, 88.40286564216754, 0.49933333333333335], [23.012000724004057, 72.58965815982091, 0.2975], [22.537537415636816, 88.4100549629541, 0.7438333333333333], [13.050544176182184, 80.24065419928995, 0.4793333333333334], [17.420898286055774, 78.52795827441419, 0.29433333333333334], [19.04721474075233, 72.87468008881748, 0.5985], [12.994949490456284, 77.63243657338109, 0.8351666666666667], [17.372905269503732, 78.48840194868494, 0.6485000000000001], [26.870871641051973, 80.96931359766529, 0.7606666666666666], [22.60089601300261, 88.37089338186415, 0.7281666666666666], [26.87286150968048, 75.82769732908781, 0.6980000000000001], [17.421557253932104, 78.51650974358184, 0.3471666666666667], [18.480386247716073, 73.82713973670815, 0.2821666666666667], [26.871060036510762, 80.8985140094582, 0.7363333333333334], [13.019522463370729, 77.58231446803556, 0.5831666666666666], [26.934331253369084, 75.8260571088488, 0.6073333333333333], [22.56206298881501, 88.34581324885997, 0.4451666666666667], [22.583474112889824, 88.37199893737481, 0.29300000000000004], [17.37591399776248, 78.49687747558677, 0.3908333333333333], [19.11953813695665, 72.87446402566266, 0.8223333333333332], [17.354674218075065, 78.4744205982883, 0.8568333333333333], [13.072110698259312, 80.23381086930263, 0.7615], [22.538887150055455, 88.38235620733937, 0.875], [23.00644777542089, 72.61688983918557, 0.6401666666666667], [26.82105967453586, 80.90609245051049, 0.4708333333333333], [22.597950456300026, 88.4020036051918, 0.9816666666666667], [18.49821133568715, 73.82690881016455, 0.9175], [26.815276613487107, 80.94840123013665, 0.4741666666666667], [28.610741664124678, 77.18494398398546, 0.5061666666666667], [28.568417311698944, 77.20714913403263, 0.6946666666666667], [18.566333234763558, 73.87195192007528, 0.3481666666666667], [28.613450655662863, 77.17006920740296, 0.9445000000000001], [17.36024362905496, 78.46617739495746, 0.8353333333333333], [23.048980355260724, 72.60907107972646, 0.8216666666666667], [26.952564185356646, 75.83575686082507, 0.5730000000000001], [22.620836668310453, 88.4091999132768, 0.4298333333333333], [13.039882214050289, 80.23447935359279, 0.17933333333333332], [28.594346652647605, 77.21428982540645, 0.3546666666666667], [12.931297788870548, 77.62917969578021, 0.5063333333333333], [28.62557561790773, 77.21323644023022, 0.6853333333333333], [28.58043113233673, 77.18432554744003, 0.9329999999999999], [26.812731202498224, 80.98139331577948, 0.4081666666666667], [13.091122786006123, 80.29421294275197, 0.6191666666666666], [23.002103286291003, 72.55852526370883, 0.3526666666666667], [26.83718549644265, 80.97220149717441, 0.8933333333333333], [22.59983529876746, 88.3345813527514, 0.613], [26.956553885673813, 75.74936553374437, 0.15316666666666667], [26.886312208242362, 80.90623956456498, 0.808], [28.590353981115133, 77.2436478536068, 0.5486666666666666], [13.05064920723461, 80.262056793131, 0.48633333333333334], [18.515385929994412, 73.83122589730232, 0.8918333333333334], [18.541424520133596, 73.89183346494022, 0.9485], [26.94985751398556, 75.77123221457366, 0.7996666666666666], [26.84978503942878, 80.92104064038656, 0.9726666666666667], [26.821179650155013, 80.91232540628519, 0.7895], [13.126701901080752, 80.30949888286057, 0.6813333333333333], [12.99933587133277, 77.59636615212877, 0.7096666666666667], [23.021560791551188, 72.57437456661825, 0.46], [13.08635680135771, 80.26415630846978, 0.8181666666666666], [13.045875483289208, 80.23326638528685, 0.4276666666666667], [13.016824971584569, 77.59280307595863, 0.8523333333333333], [23.06782055249052, 72.537757687771, 0.8523333333333333], [18.52584165520399, 73.82747172533516, 0.8058333333333333], [19.05131846061266, 72.83070545787612, 0.4658333333333333], [28.575795331074023, 77.25068484076293, 0.9713333333333333], [22.554753299148235, 88.37471292119146, 0.8931666666666667], [28.61040141319893, 77.19904512452453, 0.5056666666666666], [17.38818860913461, 78.45542389446153, 0.42866666666666664], [23.071360389851957, 72.60323078687038, 0.9995], [23.046661463273153, 72.56827592970139, 0.9015], [26.81198771221263, 80.98826658582736, 0.5928333333333333], [26.896538706738173, 75.7423106689697, 0.4696666666666667], [13.066940367681063, 80.3001457030496, 0.937], [28.626170874498822, 77.23408385847449, 0.8556666666666666], [26.94176353838624, 75.75849546110805, 0.21916666666666668], [26.889078331609316, 80.93999896029204, 0.5276666666666667], [26.860601364926413, 80.89643087725868, 0.2838333333333333], [26.896036849841117, 80.92428963859642, 0.931], [26.802906310654013, 80.94202620415365, 0.515], [13.045603005718204, 80.23593267101576, 0.8458333333333333], [22.585828281303023, 88.35319273915702, 0.427], [13.1248852450155, 80.25261564946081, 0.7531666666666667], [23.04511801283839, 72.5675099430155, 0.5203333333333333], [12.987595130112929, 77.6045695356716, 0.18116666666666667], [22.5698783972759, 88.40890610946245, 0.6186666666666667], [17.369271364275498, 78.45442355012493, 0.912], [23.040309406087985, 72.60600075613078, 0.46116666666666667], [17.339025373993994, 78.48166326884227, 0.20116666666666666], [26.88594876896873, 80.9711618618923, 0.7288333333333333], [23.071680771649763, 72.57454138115972, 0.8323333333333333], [26.928399571880117, 75.7675480281138, 0.8055], [13.0163535599666, 77.58123354885565, 0.6658333333333334], [26.936251071268664, 75.7776140204119, 0.9914999999999999], [26.8528818930063, 80.96817825350216, 0.9055], [18.521293415175133, 73.89740863269095, 0.4216666666666667], [19.067930098792782, 72.89240717981434, 0.8741666666666666], [28.598136243330007, 77.1998156668231, 0.8163333333333334], [18.514405010823353, 73.81928070183123, 0.8306666666666667], [22.9816723679059, 72.58814899231467, 0.584], [22.588151773834305, 88.38019097142102, 0.8776666666666667], [22.97447664453427, 72.55405468426717, 0.7364999999999999], [28.58368098472592, 77.2368151422544, 0.6583333333333333], [22.608663040139614, 88.33856803772261, 0.14833333333333334], [26.863484915884797, 80.90913628034583, 0.6606666666666666], [18.49791525256017, 73.82056544962334, 0.555], [19.054352076659924, 72.89517365473493, 0.7258333333333333], [23.063532691018526, 72.54165224079242, 0.419], [23.026707903495073, 72.59153911012434, 0.9658333333333333], [19.121292246848558, 72.88870604828873, 0.6908333333333333], [22.99801069310274, 72.58394781569139, 0.8926666666666667], [26.8287491161678, 80.99381283906918, 0.3285], [28.603867613516364, 77.2275427720761, 0.44616666666666666], [12.923922758234676, 77.58460614461347, 0.8223333333333332], [19.11351076133225, 72.88872274444333, 0.7758333333333334], [12.965994288639598, 77.63819374994357, 0.8283333333333334], [28.649298437614725, 77.1912215673823, 0.49083333333333334], [26.85115484020413, 80.94518242560925, 0.7536666666666666], [23.035720250011487, 72.55481112669587, 0.9445000000000001], [28.58832050007659, 77.25026718352555, 0.6425], [18.562787449949848, 73.8910322885762, 0.8533333333333334], [23.070320443076458, 72.59589915257797, 0.8076666666666668], [18.546866722856198, 73.88295900919627, 0.44399999999999995], [17.38306076309423, 78.48234521945143, 0.38383333333333336], [17.359022627614902, 78.50118191943592, 0.5503333333333333], [26.891332013610235, 75.76308084097023, 0.6205], [26.855296137409603, 80.9371982388225, 0.5468333333333334], [13.054585660879464, 80.30230560167529, 0.7835000000000001], [22.60865699192944, 88.33066995196778, 0.7815], [18.47115070328, 73.84031299685294, 0.7603333333333333], [26.942151083568078, 75.82121738662343, 0.655], [12.935432907011606, 77.6220335901183, 0.4743333333333334], [12.933170416730944, 77.58360625901565, 0.9613333333333333], [17.434860951501193, 78.45595908232309, 0.22383333333333336], [22.987896358257764, 72.56368003325467, 0.4706666666666666], [26.858666852596986, 80.98949007824133, 0.16533333333333333], [28.661982114553304, 77.16596406365915, 0.7106666666666667], [28.57769975173479, 77.2380737973896, 0.5326666666666667], [26.823763215227086, 80.98468490595064, 0.5683333333333334], [26.863045325722908, 80.90738448023808, 0.763], [13.115952928492401, 80.23833563800082, 0.32133333333333336], [26.904749539467968, 75.79251849285593, 0.758], [19.07607661490803, 72.89631629156152, 0.7013333333333334], [28.629168673486927, 77.25820420055281, 0.938], [26.896642190922417, 80.94784594026356, 0.513], [22.53211990869609, 88.38668432989687, 0.5741666666666667], [26.894366407821657, 80.9280326387629, 0.5691666666666667], [17.38112088858376, 78.47917769248154, 0.9066666666666666], [22.977641915455695, 72.58862644312234, 0.979], [23.00783376950685, 72.60014638746314, 0.14683333333333332], [28.6471120075282, 77.24112307865978, 0.6728333333333333], [12.963266599803989, 77.57675456822409, 0.9641666666666666], [26.871582077966703, 80.97633894338428, 0.7375], [18.519525744639136, 73.89600310195364, 0.589], [13.047090869607857, 80.3086068779659, 0.5864999999999999], [17.34460952329719, 78.45205255220546, 0.7114999999999999], [26.9157840013274, 75.74405184801874, 0.9118333333333334], [12.926880710140011, 77.54465187441657, 0.7081666666666666], [28.60753166596943, 77.23646238812923, 0.151], [18.47388383502799, 73.87192576064659, 0.8076666666666668], [23.05481273174162, 72.53820008485778, 0.8058333333333333], [17.349686373482143, 78.52278009736206, 0.37383333333333335], [26.94471246099501, 75.79119417662642, 0.27449999999999997], [17.4169199879294, 78.44597560774245, 0.7065], [26.836148151793875, 80.96997975561064, 0.4028333333333333], [19.051745195932398, 72.90293289144336, 0.7883333333333333], [26.912817860439084, 75.81232659879483, 0.5816666666666667], [28.610367963785734, 77.19579043402219, 0.8511666666666666], [22.994418921647863, 72.5422379341435, 0.5475], [28.63904908105714, 77.1708910348034, 0.3778333333333333], [18.478998235011094, 73.82432913650221, 0.556], [17.352534651145394, 78.51901076228069, 0.44866666666666666], [17.374850662347423, 78.53573884573605, 0.7060000000000001], [17.34872112577906, 78.50205398256936, 0.4506666666666666], [18.515272950720124, 73.84599181766971, 0.09733333333333333], [18.557908419905406, 73.90425956458284, 0.5993333333333334], [17.42228589587742, 78.45593006790351, 0.6926666666666667], [13.054779792120895, 80.28630738790952, 0.2856666666666667], [12.95050835816382, 77.61807251307806, 0.7665], [13.089342065080965, 80.27579087684904, 0.7575], [19.108854692483877, 72.89875327717428, 0.5966666666666667], [28.56655777649973, 77.1639459137146, 0.7995], [19.086155845245603, 72.87631920756223, 0.8765], [13.0587184655343, 80.26256560873149, 0.8351666666666667], [17.410791031873288, 78.51936114846579, 0.8358333333333333], [12.977722306789005, 77.58313694808571, 0.42899999999999994], [17.362069676149513, 78.48889184707693, 0.6648333333333333], [12.953074961856439, 77.60100951370472, 0.7098333333333333], [19.093665238250964, 72.83430792109195, 0.597], [13.032806746502276, 80.24192771388408, 0.34983333333333333], [17.42445114977188, 78.50132907632286, 0.45633333333333337], [18.4875960351937, 73.89572639618237, 0.7765], [13.079695594028735, 80.26830917566787, 0.795], [28.657454194384268, 77.16494866921833, 0.6325], [26.883917827462874, 75.79587713251547, 0.48116666666666663], [17.3545486509582, 78.5046527009209, 0.5828333333333333], [13.054109228933672, 80.23061569705989, 0.7111666666666666], [22.993198515964085, 72.5636734034272, 0.304], [22.99011382991731, 72.53486920249233, 0.6693333333333333], [19.112028188621895, 72.85973972035974, 0.36483333333333334], [22.558675868651825, 88.31942704095012, 0.849], [12.957336962350206, 77.57108071773216, 0.5028333333333334], [22.583648506734182, 88.33443902976724, 0.30116666666666664], [19.114836545306286, 72.92066666209196, 0.7518333333333334], [22.98248310571768, 72.53214029562885, 0.20299999999999999], [19.0375326438111, 72.88965692563103, 0.7496666666666667], [26.80889689642096, 80.98143823179304, 0.7605000000000001], [12.99702715149379, 77.6265808858238, 0.8260000000000001], [12.974206052688602, 77.64426772115192, 0.44183333333333336], [22.527017510294417, 88.35402649641861, 0.437], [26.894793666893765, 75.83216454987127, 0.7966666666666666], [18.52808609584976, 73.88731909654447, 0.5505], [18.48743411936585, 73.90456341439005, 0.9796666666666666], [13.082563954687632, 80.27006720762706, 0.16866666666666666], [26.959488472854577, 75.77537323612172, 0.411], [28.6036525024555, 77.2174752702805, 0.6465], [17.34780526105478, 78.46880856264119, 0.8595], [22.991820832244514, 72.5317283479107, 0.32366666666666666], [26.883314460633102, 80.95513311661276, 0.7688333333333334], [26.898267279152794, 75.77816693773667, 0.8223333333333332], [19.069151900368738, 72.89101491821448, 0.5691666666666667], [13.1253769391489, 80.3139779619657, 0.5095], [26.901549197953067, 75.77022624595978, 0.9258333333333333], [12.966704650018526, 77.60139342304285, 0.9118333333333334], [28.610081791144975, 77.22487534098167, 0.6048333333333333], [26.917839902337978, 75.7693715546694, 0.879], [12.956173080576264, 77.58245927875598, 0.7845], [28.57336397682494, 77.1756062632414, 0.6081666666666666], [23.04481138021454, 72.56030967115221, 0.7155], [26.883853897256017, 75.79356724105749, 0.7948333333333333], [26.937953954247345, 75.76304223623454, 0.7646666666666667], [28.646578988192374, 77.2517504859625, 0.43066666666666664], [22.582339452907384, 88.38079476589915, 0.9593333333333334], [13.037957599032307, 80.3152519891022, 0.32116666666666666], [22.561848473426497, 88.40629004005454, 0.9113333333333332], [13.090597752475025, 80.22116187988433, 0.8829999999999999], [22.976354199932345, 72.589441880567, 0.8726666666666667], [12.977866801383193, 77.5472532437206, 0.7131666666666666], [28.63824599612224, 77.24421453370692, 0.2165], [18.52004174824393, 73.85327574403573, 0.7953333333333333], [26.862947310883463, 75.81596497124936, 0.4298333333333333], [12.95467160667461, 77.63247636197825, 0.8478333333333333], [18.507706058755804, 73.86320779106308, 0.1605], [12.948634178819933, 77.5606588312585, 0.14983333333333335], [13.110190790338134, 80.27035904788464, 0.8445], [19.079648792375224, 72.92424159534818, 0.12433333333333332], [13.017957991222216, 77.63016421217024, 0.7646666666666667], [22.541360929276504, 88.37332726943016, 0.6341666666666667], [13.120514742465554, 80.25814639364489, 0.6021666666666667], [18.480510616593556, 73.887796290224, 0.9864999999999999], [13.080876355136217, 80.27713926803592, 0.23099999999999998], [13.019814429631785, 77.60532114304941, 0.8725], [12.96409793856661, 77.58159843678472, 0.735], [26.838461929265403, 80.90803990831787, 0.4076666666666667], [22.60207505584176, 88.39767168581871, 0.5051666666666667], [26.890839713457343, 75.767679661841, 0.3525], [17.422433425633482, 78.43909703555279, 0.8531666666666666], [26.914445744376724, 75.78366757146816, 0.7871666666666667], [17.404012676957848, 78.45303917001495, 0.705], [19.092833074079515, 72.86537340078749, 0.1695], [19.087871477816964, 72.83170950098729, 0.6736666666666666], [12.967772719718452, 77.59682508939824, 0.8426666666666667], [17.3564326402855, 78.45066236541791, 0.5843333333333334], [22.541447430301233, 88.34831410780633, 0.4653333333333333], [13.042381014930498, 80.31543197957296, 0.7326666666666667], [28.604399406149582, 77.23989696025068, 0.8165], [26.894141712310883, 80.90427352800027, 0.8426666666666667], [26.861866946793498, 80.98334090867412, 0.1755], [17.398423443396673, 78.47960261213574, 0.5778333333333333], [13.075807635763795, 80.22428988860074, 0.8793333333333334], [19.079460075128928, 72.92705429967869, 0.37866666666666665], [17.430870752597194, 78.44073992288422, 0.724], [13.10327970036295, 80.2508764866697, 0.5746666666666667], [13.122998915340615, 80.22521147457093, 0.2215], [18.563987410201108, 73.89044757437878, 0.3821666666666667], [12.933350438225261, 77.55058243373173, 0.7114999999999999], [26.945870766432694, 75.75287576709746, 0.8853333333333334], [19.07948981529759, 72.91927448578788, 0.5615], [26.85344481135493, 80.93592333014729, 0.5893333333333334], [22.5671016054854, 88.32021171707039, 0.6731666666666666], [13.01847523213616, 77.57566541850811, 0.26383333333333336], [22.991436349167287, 72.55000473018404, 0.4558333333333333], [28.660337319489148, 77.16842860534881, 0.6621666666666667], [19.112730304050118, 72.89848438944014, 0.8281666666666666], [18.553401917915902, 73.9042897540368, 0.19083333333333333], [13.116915465551688, 80.31503823512779, 0.27199999999999996], [28.576593525679094, 77.2385788565167, 0.5593333333333333], [26.851267569408105, 80.95054955950799, 0.38016666666666665], [26.886592157632048, 80.99338038186468, 0.48833333333333334], [28.63438383230432, 77.20729383894718, 0.886], [12.967240385790184, 77.58323414572232, 0.9486666666666668], [17.371159902957267, 78.47585068416844, 0.7133333333333334], [17.34397532352512, 78.44444360852604, 0.6691666666666667], [23.05048698438723, 72.56600728929202, 0.5355]],
+                {
+  "minOpacity": 0.3,
+  "maxZoom": 18,
+  "radius": 18,
+  "blur": 12,
+  "gradient": {
+  0.2: "blue",
+  0.4: "lime",
+  0.6: "orange",
+  0.8: "red",
+  1.0: "darkred",
+},
+}
+            );
+        
+    
+            heat_map_1fb4564c51338371f2153b340e91485d.addTo(feature_group_70fbde31f288c67d070aa485fa9fc916);
+        
+    
+            feature_group_70fbde31f288c67d070aa485fa9fc916.addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+        
+    
+            var layer_control_aeccd4a42a9f75037446c11848561244_layers = {
+                base_layers : {
+                    "cartodbdarkmatter" : tile_layer_c047a8cf9ba834dbf22958a514634453,
+                },
+                overlays :  {
+                    "AQI: Good" : feature_group_5ff2f6c2928dcb0d0a73245a3e89553d,
+                    "AQI: Moderate" : feature_group_7fae5a8d2a8b0198555791fbf45aeda9,
+                    "AQI: Unhealthy" : feature_group_56ca217ae97598c8e436b9e37655b318,
+                    "AQI: Very Unhealthy" : feature_group_5b8a0a94e17fc4f3ae0f7e60af5396fe,
+                    "AQI: Hazardous" : feature_group_9e68051fa8577372c9f982d97e332019,
+                    "Heatmap Layer" : feature_group_70fbde31f288c67d070aa485fa9fc916,
+                },
+            };
+            let layer_control_aeccd4a42a9f75037446c11848561244 = L.control.layers(
+                layer_control_aeccd4a42a9f75037446c11848561244_layers.base_layers,
+                layer_control_aeccd4a42a9f75037446c11848561244_layers.overlays,
+                {
+  "position": "topright",
+  "collapsed": false,
+  "autoZIndex": true,
+}
+            ).addTo(map_d9777348dc052b80ae0543ee5baf37f8);
+
+        
+</script>
+</html>
